@@ -13,7 +13,7 @@ let lastRead = pins.analogReadPin(AnalogPin.P2)
 Connected.showUserNumber(6, lastRead)
 while (true) {
     thisRead = pins.analogReadPin(AnalogPin.P2)
-    if (thisRead < 145) {
+    if (thisRead < 100) {
         breaks = breaks + 1
         raiseAlarm(500)
         Connected.showUserNumber(3, breaks)
