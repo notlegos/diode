@@ -1,5 +1,5 @@
 {
-    "name": "diode",
+    "name": "diode (maze)",
     "description": "",
     "dependencies": {
         "core": "*",
