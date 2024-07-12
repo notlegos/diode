@@ -3,25 +3,19 @@ function raiseAlarm (duration: number) {
     basic.pause(duration)
     Connected.ledBrightness(Connected.DigitalRJPin.J3, false)
 }
-let thisRead = 0
-Connected.laserSensor(Connected.DigitalRJPin.J4, true)
+led.enable(false)
 pins.setAudioPinEnabled(false)
-Connected.oledClear()
-radio.setGroup(80)
-let breaks = 0
-let lastRead = pins.analogReadPin(AnalogPin.P2)
-Connected.showUserNumber(6, lastRead)
-while (true) {
-    thisRead = pins.analogReadPin(AnalogPin.P2)
-    if (thisRead < 100) {
-        breaks = breaks + 1
-        raiseAlarm(500)
-        Connected.showUserNumber(3, breaks)
-        Connected.showUserNumber(4, lastRead)
-        Connected.showUserNumber(5, thisRead)
-    }
-    lastRead = thisRead
-}
+OLED.init(128, 64)
+OLED.writeStringNewLine("barf")
+pins.digitalWritePin(DigitalPin.P5, 1)
+let strip = Connected.create(Connected.DigitalRJPin.O6, 10, Connected.NeoPixelMode.RGB)
+let strip2 = Connected.create(Connected.DigitalRJPin.O7, 10, Connected.NeoPixelMode.RGB)
+strip.setBrightness(5)
+strip2.setBrightness(5)
+strip.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
+strip2.showColor(Connected.colors(Connected.NeoPixelColors.Blue))
 basic.forever(function () {
-	
+    OLED.writeStringNewLine("P0:  " + convertToText(pins.analogReadPin(AnalogPin.P0)))
+    OLED.writeStringNewLine("P1:  " + convertToText(pins.analogReadPin(AnalogPin.P1)))
+    OLED.writeStringNewLine("P2:  " + convertToText(pins.analogReadPin(AnalogPin.P2)))
 })

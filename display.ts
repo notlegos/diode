@@ -264,6 +264,21 @@ namespace Connected {
             case DigitalRJPin.W15:
                 pin = DigitalPin.P15
                 break;
+            case DigitalRJPin.O0:
+                pin = DigitalPin.P0
+                break;
+            case DigitalRJPin.O13:
+                pin = DigitalPin.P13
+                break;
+            case DigitalRJPin.O5:
+                pin = DigitalPin.P5
+                break;
+            case DigitalRJPin.O6:
+                pin = DigitalPin.P6
+                break;
+            case DigitalRJPin.O7:
+                pin = DigitalPin.P7
+                break;
         }
         return pin
     }
@@ -292,6 +307,21 @@ namespace Connected {
                 break;
             case DigitalRJPin.J4:
                 pin = AnalogPin.P15
+                break;
+            case DigitalRJPin.O0:
+                pin = AnalogPin.P0
+                break;
+            case DigitalRJPin.O13:
+                pin = AnalogPin.P13
+                break;
+            case DigitalRJPin.O5:
+                pin = AnalogPin.P5
+                break;
+            case DigitalRJPin.O6:
+                pin = AnalogPin.P6
+                break;
+            case DigitalRJPin.O7:
+                pin = AnalogPin.P7
                 break;
         }
         if (ledstate) {
@@ -913,6 +943,21 @@ namespace Connected {
                 break;
             case DigitalRJPin.W15:
                 pin = DigitalPin.P15
+                break;
+            case DigitalRJPin.O0:
+                pin = DigitalPin.P0
+                break;
+            case DigitalRJPin.O13:
+                pin = DigitalPin.P13
+                break;
+            case DigitalRJPin.O5:
+                pin = DigitalPin.P5
+                break;
+            case DigitalRJPin.O6:
+                pin = DigitalPin.P6
+                break;
+            case DigitalRJPin.O7:
+                pin = DigitalPin.P7
                 break;
         }
         let strip = new Strip();

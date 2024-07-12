@@ -448,6 +448,24 @@ namespace Connected {
             case DigitalRJPin.W1:
                 pin = DigitalPin.P1
                 break;
+            case DigitalRJPin.O0:
+                pin = DigitalPin.P0
+                break;
+            case DigitalRJPin.O16:
+                pin = DigitalPin.P16
+                break;
+            case DigitalRJPin.O13:
+                pin = DigitalPin.P13
+                break;
+            case DigitalRJPin.O5:
+                pin = DigitalPin.P5
+                break;
+            case DigitalRJPin.O6:
+                pin = DigitalPin.P6
+                break;
+            case DigitalRJPin.O7:
+                pin = DigitalPin.P7
+                break;
         }
         return pin
     }
@@ -469,6 +487,18 @@ namespace Connected {
         W15,
         //% block="W1"
         W1,
+        //% block="O0"
+        O0,
+        //% block="O16"
+        O16,
+        //% block="O13"
+        O13,
+        //% block="O5"
+        O5,
+        //% block="O6"
+        O6,
+        //% block="O7"
+        O7,
     }
     export enum AnalogRJPin {
         //% block="J1"
@@ -1956,6 +1986,12 @@ namespace Connected {
                 pin = SerialPin.P14
                 break;
             case DigitalRJPin.J4:
+                pin = SerialPin.P16
+                break;
+            case DigitalRJPin.O0:
+                pin = SerialPin.P0
+                break;
+            case DigitalRJPin.O16:
                 pin = SerialPin.P16
                 break;
         }

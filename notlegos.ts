@@ -113,6 +113,9 @@ namespace notLegos {
             case DigitalRJPin.W1:
                 pin = DigitalPin.P1
                 break;
+            case DigitalRJPin.O0:
+                pin = DigitalPin.P0
+                break;
         }
         return pin
     }
@@ -131,6 +134,8 @@ namespace notLegos {
         W15,
         //% block="W1"
         W1,
+        //% block="O0"
+        O0,
     }
 
 
